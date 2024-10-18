@@ -18,7 +18,7 @@
     }
     .page__logo::before {
         content: "";
-        display: inline-block;
+        display: block;
         background: center / contain no-repeat transparent;
         /*
         background-position: center;
@@ -26,8 +26,8 @@
         background-repeat: no-repeat;
         */
         background-image: url("../images/logo.svg");
-        height: 1em;
-        width: 2em;
+        width: auto;
+        height: 100%;
         font-size: 1.5em;
     }
     .page__logo > span {
@@ -48,12 +48,15 @@
           padding: 2em;
      }
      .page__logo {
-          display: inline-block;
+          display: block;
           padding: 1em;
+          height: 2em;
+          aspect-ratio: 42 / 24;
+          margin: 0 auto;
      }
-     .page__logo-container {
+     /* .page__logo-container { 
           text-align: center; 
-     }
+     /* }  /* zbytečný zatím */
      .page__intro {
           color: var(--light, white);
           margin-left: 1em;
@@ -70,6 +73,7 @@
      }
      .button:hover{
           text-decoration: underline;
+          text-decoration-thickness: .05em;
           background-color: var(--black, black);
           color: var(--light, white);
      }
@@ -77,7 +81,41 @@
           background-color: var(--light, white);
           color:var(--black, black);
      }
-     
+     .page__content {
+          padding: 1em;
+          max-width: 960px;
+          margin: auto;
+     }
+     .picture-box {
+          margin: 2em 0em;
+     }
+     .picture-box__caption {
+          font-size: 0.8em;
+          color: var(--gray, gray);
+          text-align: center;
+          margin-top: .75em;
+     }
+     .text-h3 {
+          font-size: 1.125em;
+          font-weight: 700;
+          margin-bottom: 1em;
+     }
+     .outline-box {
+          border: 3px solid var(--primary, teal);
+          padding: 1em;
+          margin: 1em 0;
+     }
+     .list > li::marker {
+          color: var(--primary, aqua);
+     }
+     .list > li {
+          padding: 1em;
+     }
+     .product {
+          display: inline-block;
+          padding: 1em;
+          max-width: 24em;
+     }
 }
 
 
